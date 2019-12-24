@@ -1,5 +1,5 @@
 FROM jupyterhub/jupyterhub:1.0.0
-RUN apt update -y && pip install notebook --upgrade
+RUN apt update -y && pip install notebook jupyter_contrib_nbextensions tornado==5.1.1
 RUN chmod -R 777 /home
 RUN useradd admin
 RUN echo "admin:admin" | chpasswd
